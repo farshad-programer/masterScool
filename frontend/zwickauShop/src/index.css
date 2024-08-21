@@ -1,0 +1,21 @@
+@import url("./assets/css/style.css");
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+input:-webkit-autofill {
+  background-color: transparent !important;
+  -webkit-text-fill-color: #000 !important; /* رنگ متن */
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  background-color: transparent !important;
+  -webkit-text-fill-color: #000 !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+}
+
+.checkbox-1:checked ~ .check-1 {
+  @apply text-opacity-100;
+}

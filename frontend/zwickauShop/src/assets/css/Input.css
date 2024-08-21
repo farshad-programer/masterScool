@@ -1,0 +1,79 @@
+@layer components {
+  .errorInfo {
+    @apply text-red-600 w-7  absolute top-1/2 -translate-y-1/2 right-2 drop-shadow-[0_5px_6px_rgba(220,38,38,0.65)];
+  }
+}
+@layer components {
+  .popup-top {
+    @apply;
+  }
+}
+@layer components {
+  .popup-down {
+    @apply relative
+    before:content-[attr(data-tip)]
+   
+    
+    before:absolute
+    before:px-3 before:py-1
+     before:right-[20%] before:-bottom-10
+    before:w-max before:max-w-xs
+    hover:before:bg-stone-500 hover:before:backdrop-blur-2xl  hover:before:shadow-sm
+    hover:before:border hover:before:border-t-0 hover:before:border-gray-400
+     before:text-white
+    before:rounded-md before:opacity-0
+  before:text-sm
+  after:duration-500
+  before:duration-700
+    after:absolute
+    after:inline-block
+    before:inline-block
+     after:-bottom-3
+    after:h-0 after:w-0
+    after:left-[32%]
+     after:border-8
+    after:border-b-stone-500
+    after:border-l-transparent
+    after:border-t-transparent
+    after:border-r-transparent
+    after:opacity-0
+
+  before:hover:animate-rolls
+  
+  after:hover:animate-rollsY
+    
+    hover:before:opacity-100 hover:after:opacity-100;
+  }
+}
+@layer components {
+  .cornerpopup {
+    @apply relative 
+     after:absolute after:border-t-transparent after:h-2 after:w-4 after:top-[0%] after:left-[1%] after:border-r-transparent after:border-b-transparent after:border-[10px] after:content-[''] after:border-l-orange-600 before:rounded-tr-xl before:rounded-bl-xl before:text-center before:pt-[.2rem] before:top-2 before:left-[1%] before:text-white before:w-[50px] before:h-[30px] before:absolute before:bg-orange-600;
+  }
+}
+@layer components {
+  .popup-right {
+    @apply;
+  }
+}
+.textInput {
+  padding-top: 0.75rem;
+  padding-bottom: 0rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  background-color: #f3f4f6;
+  color: #4b5563;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  width: 100%;
+  border-radius: 0.5rem;
+  border-style: none;
+  box-shadow: var(--tw-ring-inset) 0 0 0 calc(1px + var(--tw-ring-offset-width))
+    var(--tw-ring-color);
+}
+
+.screen50 {
+  width: 70vh;
+  height: 70vh;
+}

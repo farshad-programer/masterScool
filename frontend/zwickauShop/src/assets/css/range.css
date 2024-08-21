@@ -1,0 +1,93 @@
+:root {
+    --slider-thumb-size: 1rem; /* 16px */
+    --slider-thumb-color: #fff; /* White */
+    --slider-track-color: #e5e5e5; /* Light grey for the track */
+    --slider-progress-color: #007aff; /* Blue color for the filled part */
+  }
+  
+  .range-slider {
+    position: relative;
+    width: 95%;
+    height: 2rem; /* Adjusted height for better thumb visibility */
+    display: flex;
+    align-items: center;
+    
+  }
+  
+  .slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 0.5rem; /* Height of the slider track */
+    background: #e5e5e5;
+    border-radius: 0.25rem; /* Rounded corners for the track */
+    outline: none;
+    position: relative;
+    cursor: pointer;
+    box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.3); /* Inner shadow for the track */
+     /* Ensure the slider is above the progress bar */
+  }
+  
+  .slider:hover {
+    box-shadow: inset 0 1px 5px rgba(0, 0, 0, 0.4); /* Stronger inner shadow on hover */
+  }
+  
+  .slider::-webkit-slider-thumb {
+
+    -webkit-appearance: none;
+    appearance: none;
+    width: 1rem;
+    height: 1rem;
+    background: var(--slider-thumb-color);
+    border: 1px solid #c6c6c8; /* Light grey border for the thumb */
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Outer shadow for the thumb */
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    z-index: 4; /* Ensure the thumb is above the slider */
+opacity: 0;
+
+  }
+  
+  .slider::-webkit-slider-thumb:hover {
+
+opacity: 0;
+    background: #f2f2f7; /* Slightly darker background on hover */
+    transform: scale(1.1); /* Slight scaling on hover */
+    z-index: 4;
+  }
+  
+  .slider::-moz-range-thumb {
+    opacity: 0;
+
+
+    width: var(--slider-thumb-size);
+    height: var(--slider-thumb-size);
+    background: var(--slider-thumb-color);
+    border: 1px solid #c6c6c8;
+    border-radius: 50%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    z-index: 4;
+  }
+  
+  .slider::-moz-range-thumb:hover {
+    background: #f2f2f7;
+    transform: scale(1.1);
+opacity: 0;
+
+  }
+  
+  .progress {
+    position: absolute;
+    bottom: 0.01rem;
+    left: 0;
+    height: 0.3rem;
+    
+    border-radius: 0.25rem;
+    transform: translateY(-50%);
+    z-index: 2; /* Ensure the progress bar is behind the slider */
+    pointer-events: none;
+  }
+  
